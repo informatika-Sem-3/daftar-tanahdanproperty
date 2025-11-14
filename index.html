@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Detail Properti</title>
+<title>Daftar Tanah & Property – MU Property Land</title>
 
 <style>
     body {
-        font-family: 'Segoe UI', Tahoma;
+        font-family: 'Segoe UI', Tahoma, sans-serif;
         margin: 0;
-        padding: 0;
-        background: #fafafa;
+        background: #f5f5f5;
         color: #222;
     }
 
+    /* HEADER */
     header {
         background: #000;
         padding: 20px;
@@ -22,71 +22,102 @@
         gap: 15px;
         color: #fff;
     }
+    header img { height: 50px; }
+    header h1 { margin: 0; font-size: 22px; }
 
-    header img {
-        height: 50px;
-    }
-
+    /* CONTAINER */
     .container {
-        max-width: 1000px;
+        max-width: 1100px;
         margin: 40px auto;
         padding: 10px;
     }
-
-    .main-image {
-        width: 100%;
-        border-radius: 12px;
-        height: 450px;
-        object-fit: cover;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
     h2 {
-        font-size: 28px;
-        margin-top: 25px;
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 30px;
+        font-weight: bold;
     }
 
-    .info-box {
+    /* GRID CARD */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
+
+    .card {
         background: #fff;
-        padding: 25px;
-        margin-top: 20px;
         border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
     }
 
-    .info-box p {
-        font-size: 16px;
+    .info {
+        padding: 18px;
+    }
+
+    .info h3 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .info p {
         margin: 8px 0;
+        font-size: 15px;
     }
 
-    .btn-wa {
-        background: #25D366;
-        color: #fff;
-        padding: 12px 20px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: 700;
+    .btn {
         display: inline-block;
-        margin-top: 20px;
+        background: #d4a017;
+        padding: 10px 14px;
+        margin-top: 12px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
     }
 
+    /* PAGINATION */
+    .pagination {
+        text-align: center;
+        margin: 40px 0;
+    }
+    .pagination a {
+        display: inline-block;
+        padding: 10px 15px;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 4px;
+    }
+
+    /* FOOTER */
     footer {
         background: #000;
         color: #fff;
+        padding: 40px 10px;
         text-align: center;
-        padding: 35px 10px;
-        margin-top: 50px;
         position: relative;
     }
-
     footer:before {
         content: "";
+        position: absolute;
+        top: 0;
         width: 60%;
         height: 3px;
         background: #d4a017;
-        position: absolute;
-        top: 0;
         left: 20%;
         border-radius: 100px;
     }
@@ -102,29 +133,96 @@
 
 <div class="container">
 
-    <img src="tanah.png" class="main-image">
+    <h2>Daftar Tanah & Property Tersedia</h2>
 
-    <h2>Tanah Sofifi – 1200m²</h2>
+    <div class="grid">
 
-    <div class="info-box">
+        <!-- Tanah 1 -->
+        <div class="card">
+            <img src="tanah.png">
+            <div class="info">
+                <h3>Tanah Sofifi</h3>
+                <p><b>Luas:</b> 1200 m²</p>
+                <p><b>Sertifikat:</b> SHM Elektronik</p>
+                <p><b>Harga:</b> Rp 200.000.000</p>
+                <a href="detail1.html" class="btn">Lihat Detail</a>
+            </div>
+        </div>
 
-        <p><b>Lokasi:</b> Sofifi</p>
-        <p><b>Luas:</b> 1200 m²</p>
-        <p><b>Sertifikat:</b> SHM Elektronik</p>
-        <p><b>Harga:</b> Rp 200.000.000</p>
-        <p><b>Deskripsi:</b> Tanah strategis, cocok untuk investasi atau usaha. Akses mudah dan lingkungan berkembang.</p>
+        <!-- Tanah 2 -->
+        <div class="card">
+            <img src="tanah1.png">
+            <div class="info">
+                <h3>Tanah Fitu</h3>
+                <p><b>Luas:</b> 800 m²</p>
+                <p><b>Sertifikat:</b> Sporadik</p>
+                <p><b>Harga:</b> Rp 95.000.000</p>
+                <a href="detail2.html" class="btn">Lihat Detail</a>
+            </div>
+        </div>
 
-        <a class="btn-wa" href="https://wa.me/6281229942538" target="_blank">
-            Hubungi via WhatsApp
-        </a>
+        <!-- Tanah 3 -->
+        <div class="card">
+            <img src="tanah2.png">
+            <div class="info">
+                <h3>Tanah Akelamo</h3>
+                <p><b>Luas:</b> 2500 m²</p>
+                <p><b>Sertifikat:</b> SKPT</p>
+                <p><b>Harga:</b> Rp 350.000.000</p>
+                <a href="detail3.html" class="btn">Lihat Detail</a>
+            </div>
+        </div>
 
+        <!-- Tanah 4 -->
+        <div class="card">
+            <img src="tanah3.png">
+            <div class="info">
+                <h3>Tanah Sasa</h3>
+                <p><b>Luas:</b> 600 m²</p>
+                <p><b>Sertifikat:</b> SHM</p>
+                <p><b>Harga:</b> Rp 180.000.000</p>
+                <a href="detail4.html" class="btn">Lihat Detail</a>
+            </div>
+        </div>
+
+        <!-- Rumah 1 -->
+        <div class="card">
+            <img src="rumah.png">
+            <div class="info">
+                <h3>Rumah Minimalis</h3>
+                <p><b>Luas:</b> 72 m²</p>
+                <p><b>Sertifikat:</b> SHM</p>
+                <p><b>Harga:</b> Rp 450.000.000</p>
+                <a href="detail5.html" class="btn">Lihat Detail</a>
+            </div>
+        </div>
+
+        <!-- Rumah 2 -->
+        <div class="card">
+            <img src="rumah1.png">
+            <div class="info">
+                <h3>Rumah Cluster Elite</h3>
+                <p><b>Luas Tanah:</b> 150 m²</p>
+                <p><b>Sertifikat:</b> SHM</p>
+                <p><b>Harga:</b> Rp 600.000.000</p>
+                <a href="detail6.html" class="btn">Lihat Detail</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">Next</a>
     </div>
 
 </div>
 
 <footer>
-    MU Property Land – Solusi Tanah & Property Terpercaya  
-    <br>Kontak: 081229942538
+    MU Property Land – Solusi Tanah & Property Terpercaya<br>
+    Kontak: 081229942538
 </footer>
 
 </body>
